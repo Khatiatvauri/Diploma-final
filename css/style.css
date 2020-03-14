@@ -175,6 +175,34 @@ h6 {
 .ul-flex1 {
   flex: 1; }
 
+.lending-image {
+  background-image: url("../img/ColorPanel.png"); }
+
+.nav {
+  display: flex;
+  padding: 30px; }
+
+.logo-ul {
+  display: flex;
+  justify-content: center; }
+  .logo-ul .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: black; }
+
+.right-nav-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .right-nav-ul .right-nav {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 200;
+    color: black; }
+
+.ul-flex1 {
+  flex: 1; }
+
 .sec-1 {
   display: flex;
   justify-content: space-between; }
