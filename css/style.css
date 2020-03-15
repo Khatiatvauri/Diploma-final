@@ -440,3 +440,51 @@ footer {
     color: gray;
     font-size: 20px;
     margin-right: 20px; }
+
+.contact-sec {
+  display: flex;
+  justify-content: center; }
+  .contact-sec .contact-image {
+    flex: 1;
+    height: 900px;
+    background-image: url("../img/grey-and-white-baby-room-P2JX5WN.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 30px; }
+  .contact-sec .contact-form {
+    width: 320px; }
+    .contact-sec .contact-form input,
+    .contact-sec .contact-form select {
+      outline: none;
+      border: none; }
+    .contact-sec .contact-form input[type="text"],
+    .contact-sec .contact-form select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; }
+    .contact-sec .contact-form input[type="submit"] {
+      width: 100%;
+      background-color: #1d2539;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out; }
+      @media (hover: hover) {
+        .contact-sec .contact-form input[type="submit"]:hover {
+          background-color: #2c395a;
+          transform: scale(1.1); } }
+      .contact-sec .contact-form input[type="submit"]:active {
+        background-color: steelblue;
+        color: #fff;
+        transform: scale(0.9); }
+    .contact-sec .contact-form div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px; }
