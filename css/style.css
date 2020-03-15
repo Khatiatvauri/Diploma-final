@@ -140,93 +140,240 @@ a {
 * {
   box-sizing: border-box; }
 
-a,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+* {
   font-family: "Montserrat", sans-serif; }
 
-.nav {
+button {
+  outline: none; }
+
+html,
+body {
+  min-width: 320px;
+  box-sizing: border-box; }
+
+header .nav {
   display: flex;
   padding: 30px; }
+  header .nav .logo-ul {
+    display: flex;
+    justify-content: center; }
+    header .nav .logo-ul .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: black; }
+  header .nav .ul-flex1 {
+    flex: 1; }
+  header .nav .right-nav-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    header .nav .right-nav-ul li {
+      margin-left: 20px; }
+      header .nav .right-nav-ul li.bars {
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        transition: all 0.3s ease-in-out; }
+        @media (hover: hover) {
+          header .nav .right-nav-ul li.bars:hover {
+            transform: scale(1.1); }
+            header .nav .right-nav-ul li.bars:hover .popup {
+              display: block; } }
+        header .nav .right-nav-ul li.bars:active {
+          transform: scale(0.9); }
+        header .nav .right-nav-ul li.bars .fas {
+          display: block; }
+      @media (min-width: 601px) {
+        header .nav .right-nav-ul li.mnu {
+          display: block; }
+        header .nav .right-nav-ul li.bars {
+          display: none; } }
+      @media (max-width: 600px) {
+        header .nav .right-nav-ul li.mnu {
+          display: none; }
+        header .nav .right-nav-ul li.bars {
+          display: block; } }
+      header .nav .right-nav-ul li a.right-nav {
+        font-size: 18px;
+        font-weight: 200;
+        color: black; }
 
-.logo-ul {
-  display: flex;
-  justify-content: center; }
-  .logo-ul .logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: black; }
+body section {
+  padding: 0 30px; }
+  body section.s1 .lending-image {
+    position: relative;
+    height: 33vw;
+    min-width: 240px;
+    background-image: url("../img/landing.JPG");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: background-size 0.5s ease-in-out, filter 0.5s ease-in-out; }
+    @media screen and (max-width: 500px) {
+      body section.s1 .lending-image {
+        height: 280px; } }
+    @media (hover: hover) {
+      body section.s1 .lending-image:hover {
+        background-size: 105%;
+        filter: grayscale(30%) contrast(130%); } }
+    body section.s1 .lending-image button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 28px;
+      color: #fff;
+      padding: 12px 24px;
+      background-color: black;
+      border: none;
+      transition: all 0.3s ease-in-out;
+      transform-origin: bottom right;
+      cursor: pointer; }
+      @media (hover: hover) {
+        body section.s1 .lending-image button:hover {
+          color: black;
+          background-color: #fff;
+          transform: scale(1.1); } }
+      body section.s1 .lending-image button:active {
+        background-color: steelblue;
+        color: #fff;
+        transform: scale(0.9); }
+  body section.s2 {
+    margin-top: 60px;
+    display: flex; }
+    body section.s2 div.left-pane {
+      min-width: 340px;
+      margin-right: 30px;
+      box-sizing: border-box;
+      padding: 10px; }
+      @media screen and (max-width: 800px) {
+        body section.s2 div.left-pane {
+          display: none; } }
+      body section.s2 div.left-pane p {
+        font-size: 28px;
+        color: black;
+        font-weight: 200; }
+      body section.s2 div.left-pane h1 {
+        margin-top: 40px;
+        font-size: 48px;
+        max-width: 300px;
+        color: black;
+        font-weight: 700; }
+      body section.s2 div.left-pane .line {
+        margin-top: 40px;
+        width: 200px;
+        height: 2px;
+        background-color: #fe7865; }
+      body section.s2 div.left-pane h2 {
+        margin-top: 40px;
+        font-size: 20px;
+        max-width: 300px;
+        color: black;
+        font-weight: 100;
+        line-height: 30px; }
+      body section.s2 div.left-pane .left-pane-img {
+        display: flex;
+        align-items: center; }
+        body section.s2 div.left-pane .left-pane-img .img {
+          background-image: url("../img/adult-beautiful-confidence-1030915.png");
+          background-size: cover;
+          margin-right: 20px;
+          margin-top: 40px;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-color: greenyellow; }
+        body section.s2 div.left-pane .left-pane-img label {
+          margin-top: 40px;
+          font-size: 20px;
+          font-weight: 500; }
+    body section.s2 div.structure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex: 1; }
+      body section.s2 div.structure .col {
+        height: 1000px;
+        flex: 1;
+        min-width: 400px;
+        max-width: 600px; }
+        body section.s2 div.structure .col.col-1 {
+          padding-bottom: 126px; }
+          @media screen and (max-width: 1250px) {
+            body section.s2 div.structure .col.col-1 {
+              padding-bottom: 20px;
+              margin-bottom: 20px; } }
+          body section.s2 div.structure .col.col-1 .box.b1 {
+            height: 30%;
+            margin-left: 168px;
+            background-color: #badac4;
+            background-image: url("../img/minimalistic-studio-apartment-PS5UR8Z.jpg"); }
+          body section.s2 div.structure .col.col-1 .box.b2 {
+            height: 45%;
+            margin-left: 0px;
+            background-color: #f2f2f4;
+            background-image: url("../img/scandi-style-baby-room-PEKQZM6.jpg"); }
+          body section.s2 div.structure .col.col-1 .box.b3 {
+            height: 25%;
+            margin-left: 168px;
+            background-color: #ffeddb;
+            background-image: url("../img/dining-room-with-metal-furniture-P9ARZVK.jpg"); }
+        body section.s2 div.structure .col.col-2 {
+          margin-left: 20px;
+          padding-top: 278px; }
+          body section.s2 div.structure .col.col-2 .box {
+            padding: 50px;
+            font-size: 24px; }
+          @media screen and (max-width: 1250px) {
+            body section.s2 div.structure .col.col-2 {
+              padding-top: 20px; } }
+          body section.s2 div.structure .col.col-2 .box.b1 {
+            height: 30%;
+            margin-right: 136px;
+            background-color: #dbedf0; }
+          body section.s2 div.structure .col.col-2 .box.b2 {
+            height: 45%;
+            margin-right: 0px;
+            background-color: #ffeddb; }
+          body section.s2 div.structure .col.col-2 .box.b3 {
+            height: 25%;
+            margin-right: 136px;
+            background-color: #dbedf0; }
+        body section.s2 div.structure .col .box {
+          margin-bottom: 20px;
+          background-position: center;
+          background-size: cover;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
 
-.right-nav-ul {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .right-nav-ul .right-nav {
-    margin-right: 20px;
-    font-size: 18px;
-    font-weight: 200;
-    color: black; }
-
-.ul-flex1 {
-  flex: 1; }
-
-.lending-image {
-  background-image: url("../img/ColorPanel.png"); }
-
-.nav {
-  display: flex;
-  padding: 30px; }
-
-.logo-ul {
-  display: flex;
-  justify-content: center; }
-  .logo-ul .logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: black; }
-
-.right-nav-ul {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .right-nav-ul .right-nav {
-    margin-right: 20px;
-    font-size: 18px;
-    font-weight: 200;
-    color: black; }
-
-.ul-flex1 {
-  flex: 1; }
-
-.sec-1 {
+.products .sec-1 {
   display: flex;
   justify-content: space-between; }
-  .sec-1 .chair {
+  .products .sec-1 .chair {
     height: 300px;
     width: 40%;
     background-repeat: no-repeat;
     background-image: url("../img/image_4_25576.png");
     background-position: center;
     background-size: contain; }
-  .sec-1 .chair-hot-sec2 {
+  .products .sec-1 .chair-hot-sec2 {
     font-size: 45px;
     font-weight: 800;
     height: 300px;
     width: 40%; }
-    .sec-1 .chair-hot-sec2 .Bjorg-chai {
+    .products .sec-1 .chair-hot-sec2 .Bjorg-chai {
       margin-bottom: 10px; }
-    .sec-1 .chair-hot-sec2 .text-sec-2 {
+    .products .sec-1 .chair-hot-sec2 .text-sec-2 {
       font-size: 16px;
       font-weight: 200;
       max-width: 300px;
       line-height: 24px;
       margin-top: 20px; }
-  .sec-1 .circle {
+  .products .sec-1 .circle {
     display: flex;
     background-image: url(../img/ColorPanel.png);
     width: 300px;
@@ -234,35 +381,62 @@ h6 {
     margin-top: 20px;
     background-repeat: no-repeat;
     background-size: contain; }
-  .sec-1 .w3-Round {
+  .products .sec-1 .w3-Round {
     padding: 12px 22px;
     color: #fff;
     background-color: #fe7865;
     border-radius: 20px;
     border: none;
     margin-top: 40px; }
-  .sec-1 .SHARE-PRODUCT {
+  .products .sec-1 .SHARE-PRODUCT {
     font-size: 14px;
     margin-top: 30px;
     font-weight: 200; }
-  .sec-1 .last-chairs {
+  .products .sec-1 .last-chairs {
     display: flex;
     flex-direction: column;
     width: 35%; }
-    .sec-1 .last-chairs .chair-sec3 {
+    .products .sec-1 .last-chairs .chair-sec3 {
       height: 150px;
       background-repeat: no-repeat;
       background-image: url("../img/image_4_25578.png");
       background-position: center;
       background-size: contain; }
-    .sec-1 .last-chairs .chair-sec4 {
+    .products .sec-1 .last-chairs .chair-sec4 {
       height: 300px;
       background-repeat: no-repeat;
       background-image: url("../img/image_4_25577.png");
       background-position: center;
       background-size: contain; }
 
+.products .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 200px;
+  font-size: 44px;
+  color: #fff;
+  background-image: url("../img/pr_1.jpg");
+  height: 500px;
+  background-size: cover;
+  margin: 40px; }
+  @media screen and (max-width: 800px) {
+    .products .image {
+      font-size: 30px;
+      padding: 0 50px; } }
+
 footer {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  height: 100px;
+  background-color: #f0f0f0; }
+  footer p {
+    color: black; }
+  footer .fab {
+    color: gray;
+    font-size: 20px;
+    margin-right: 20px; }

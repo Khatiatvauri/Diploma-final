@@ -1,0 +1,72 @@
+header {
+  .nav {
+    display: flex;
+    padding: 30px;
+    .logo-ul {
+      display: flex;
+      justify-content: center;
+
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: black;
+      }
+    }
+    .ul-flex1 {
+      flex: 1;
+    }
+    .right-nav-ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        margin-left: 20px;
+        &.bars {
+          font-size: 24px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          transition: all 0.3s ease-in-out;
+          @media (hover: hover) {
+            &:hover {
+              transform: scale(1.1);
+              .popup {
+                display: block;
+              }
+            }
+          }
+
+          &:active {
+            transform: scale(0.9);
+          }
+          .fas {
+            display: block;
+          }
+        }
+        @media (min-width: 601px) {
+          &.mnu {
+            display: block;
+          }
+          &.bars {
+            display: none;
+          }
+        }
+        @media (max-width: 600px) {
+          &.mnu {
+            display: none;
+          }
+          &.bars {
+            display: block;
+          }
+        }
+        a.right-nav {
+          font-size: 18px;
+          font-weight: 200;
+          color: black;
+        }
+      }
+    }
+  }
+}

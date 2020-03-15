@@ -1,0 +1,191 @@
+// nav
+
+body {
+  section {
+    padding: 0 30px;
+    &.s1 {
+      .lending-image {
+        position: relative;
+        height: 33vw;
+        @media screen and(max-width:500px) {
+          height: 280px;
+        }
+        min-width: 240px;
+        background-image: url("../img/landing.JPG");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        transition: background-size 0.5s ease-in-out, filter 0.5s ease-in-out;
+        @media (hover: hover) {
+          &:hover {
+            background-size: 105%;
+            filter: grayscale(30%) contrast(130%);
+          }
+        }
+        button {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          font-size: 28px;
+          color: #fff;
+          padding: 12px 24px;
+          background-color: black;
+          border: none;
+          transition: all 0.3s ease-in-out;
+          transform-origin: bottom right;
+
+          cursor: pointer;
+          @media (hover: hover) {
+            &:hover {
+              color: black;
+              background-color: #fff;
+              transform: scale(1.1);
+            }
+          }
+
+          &:active {
+            background-color: steelblue;
+            color: #fff;
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+    &.s2 {
+      margin-top: 60px;
+      display: flex;
+      div {
+        &.left-pane {
+          @media screen and(max-width: 800px) {
+            display: none;
+          }
+          min-width: 340px;
+          margin-right: 30px;
+          box-sizing: border-box;
+          padding: 10px;
+          p {
+            font-size: 28px;
+            color: black;
+            font-weight: 200;
+          }
+          h1 {
+            margin-top: 40px;
+            font-size: 48px;
+            max-width: 300px;
+            color: black;
+            font-weight: 700;
+          }
+          .line {
+            margin-top: 40px;
+            width: 200px;
+            height: 2px;
+            background-color: #fe7865;
+          }
+          h2 {
+            margin-top: 40px;
+            font-size: 20px;
+            max-width: 300px;
+            color: black;
+            font-weight: 100;
+            line-height: 30px;
+          }
+          .left-pane-img {
+            display: flex;
+            align-items: center;
+            .img {
+              background-image: url("../img/adult-beautiful-confidence-1030915.png");
+              background-size: cover;
+              margin-right: 20px;
+              margin-top: 40px;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              background-color: greenyellow;
+            }
+            label {
+              margin-top: 40px;
+              font-size: 20px;
+              font-weight: 500;
+            }
+          }
+        }
+        &.structure {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          flex: 1;
+          .col {
+            height: 1000px;
+            flex: 1;
+            min-width: 400px;
+            max-width: 600px;
+            &.col-1 {
+              padding-bottom: 126px;
+              @media screen and(max-width: 1250px) {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+              }
+              .box.b1 {
+                height: 30%;
+                margin-left: 168px;
+                background-color: #badac4;
+                background-image: url("../img/minimalistic-studio-apartment-PS5UR8Z.jpg");
+              }
+              .box.b2 {
+                height: 45%;
+                margin-left: 0px;
+                background-color: #f2f2f4;
+                background-image: url("../img/scandi-style-baby-room-PEKQZM6.jpg");
+              }
+              .box.b3 {
+                height: 25%;
+                margin-left: 168px;
+                background-color: #ffeddb;
+                background-image: url("../img/dining-room-with-metal-furniture-P9ARZVK.jpg");
+              }
+            }
+
+            &.col-2 {
+              .box {
+                padding: 50px;
+                font-size: 24px;
+              }
+              margin-left: 20px;
+              padding-top: 278px;
+              @media screen and(max-width: 1250px) {
+                padding-top: 20px;
+              }
+
+              .box.b1 {
+                height: 30%;
+                margin-right: 136px;
+                background-color: #dbedf0;
+              }
+              .box.b2 {
+                height: 45%;
+                margin-right: 0px;
+                background-color: #ffeddb;
+              }
+              .box.b3 {
+                height: 25%;
+                margin-right: 136px;
+                background-color: #dbedf0;
+              }
+            }
+            .box {
+              margin-bottom: 20px;
+              background-position: center;
+              background-size: cover;
+
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
